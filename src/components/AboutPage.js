@@ -20,9 +20,7 @@ export default function AboutPage() {
             and increased our online presence to connect us to our communities
             and resources. As our online presence increases to help us navigate
             our new normal, it comes with understanding there are risks involved
-            in doing so. The internet can be a not-so-safe place and it’s
-            important to understand the risks involved as we continue to rely on
-            technology. We chose to implement a page asking users to accept a
+            in doing so. We chose to implement a page asking users to accept a
             privacy policy because a study by PEW research found “about
             eight-in-ten Americans say they are asked to agree to a privacy
             policy at least monthly, including one-quarter of which who say this
