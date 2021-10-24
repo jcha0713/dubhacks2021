@@ -66,27 +66,25 @@ export default function AboutPage() {
                     alt="Developer Bryan"
                   ></img>
                   <div className="card-body">
-                    <h5 className="card-title text-center">
-                      Developer -Bryan Phan
-                    </h5>
+                    <h5 className="card-title text-center">Developer - Bryan Phan</h5>
                   </div>
                 </div>
               </div>
 
               <div className="col">
                 <div className="card h-100">
-                  <img src="" className="circImg" alt="Developer"></img>
+                  <img src="./img/Carroll.JPG" className="circImg" alt="Developer"></img>
                   <div className="card-body">
-                    <h5 className="card-title text-center">Developer -</h5>
+                    <h5 className="card-title text-center">Developer - Ryan Carroll</h5>
                   </div>
                 </div>
               </div>
 
               <div className="col">
                 <div className="card h-100">
-                  <img src="" className="circImg" alt="Developer"></img>
+                  <img src="./img/Joo.JPG" className="circImg" alt="Developer"></img>
                   <div className="card-body">
-                    <h5 className="card-title text-center">Developer -</h5>
+                    <h5 className="card-title text-center">Developer - Joohoon Cha</h5>
                   </div>
                 </div>
               </div>
