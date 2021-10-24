@@ -1,10 +1,16 @@
 import React from 'react';
+import Navbar from './Navbar';
 
 // resources page
 export default function ResourcesPage() {
     return (
         <div>
-            <h1>Resources Page View</h1>
+            <Navbar/>
+            <main>
+                <div>
+                    <h1>Resources Page View</h1>
+                </div>
+            </main>
         </div>
     )
 }
