@@ -72,7 +72,7 @@ export default function AboutPage() {
               alt="Developer Carroll"
             />
             <p class="text-lg text-center text-primary-darker">
-              Developer - Bryan Phan
+              Developer - Ryan Carroll
             </p>
           </div>
           <div>

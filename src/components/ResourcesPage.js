@@ -7,18 +7,29 @@ export default function ResourcesPage() {
     <div className="w-screen min-h-screen max-h-full flex flex-col bg-accent">
       <Navbar />
       <div className="mt-8 mx-auto w-3/4">
-        <a
-          href="https://interestingengineering.com/what-data-are-voice-assistants-collecting-and-how-to-protect-yourself"
-          className="text-primary text-4xl font-semibold mb-8"
-        >
-          Smart Speakers
-        </a>
+        <h1 className="text-primary text-4xl font-semibold mb-8">
+          The future of personal data collection
+        </h1>
 
         <div className="mb-12">
-          <h3 className="text-3xl mb-2">
-            Why did we choose to do this project
-          </h3>
-          <p className="leading-8 text-xl mb-12"></p>
+          <a
+            href="https://interestingengineering.com/what-data-are-voice-assistants-collecting-and-how-to-protect-yourself"
+            className="text-2xl mb-2"
+          >
+            Smart Speakers
+          </a>
+          <a
+            href="https://www.wired.com/story/apple-watch-heart-monitoring-pros-and-cons/"
+            className="text-xl mb-2"
+          >
+            Wearable Health Monitors
+          </a>
+          <a
+            href="https://www.orlandosentinel.com/news/breaking-news/os-amazon-orlando-police-cameras-downtown-20180524-story.html"
+            className="text-xl mb-2"
+          >
+            Facial regognition enabled surveillance cameras
+          </a>
         </div>
       </div>
     </div>
