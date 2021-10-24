@@ -54,55 +54,38 @@ export default function AboutPage() {
             be observed and recorded to an unfathomable extent?
           </ul>
         </div>
-        <div className="card">
-          <div className="card-body">
-            <h1>Our Team</h1>
-            <div className="row row-cols-1 row-cols-md-4 g-4">
-              <div className="col">
-                <div className="card h-100">
-                  <img
-                    src="./img/Bryan.JPG"
-                    className="cicrImg"
-                    alt="Developer Bryan"
-                  ></img>
-                  <div className="card-body">
-                    <h5 className="card-title text-center">
-                      Developer - Bryan Phan
-                    </h5>
-                  </div>
-                </div>
-              </div>
+        <h1 className="text-primary text-4xl font-semibold mb-8">Our Team</h1>
+        <div className="flex justify-around items-center mb-12">
+          <div>
+            <img
+              src="./img/Bryan.JPG"
+              className="object-cover w-48 h-48 rounded-full mb-2"
+              alt="Developer Bryan"
+            />
+            <p class="text-lg text-center text-primary-darker">
+              Developer - Bryan Phan
+            </p>
+          </div>
 
-              <div className="col">
-                <div className="card h-100">
-                  <img
-                    src="./img/Carroll.JPG"
-                    className="circImg"
-                    alt="Developer"
-                  ></img>
-                  <div className="card-body">
-                    <h5 className="card-title text-center">
-                      Developer - Ryan Carroll
-                    </h5>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col">
-                <div className="card h-100">
-                  <img
-                    src="./img/joohoon.JPG"
-                    className="circImg"
-                    alt="Developer"
-                  ></img>
-                  <div className="card-body">
-                    <h5 className="card-title text-center">
-                      Developer - Joohoon Cha
-                    </h5>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div>
+            <img
+              src="./img/Carroll.JPG"
+              className="object-cover w-48 h-48 rounded-full mb-2"
+              alt="Developer Carroll"
+            />
+            <p class="text-lg text-center text-primary-darker">
+              Developer - Bryan Phan
+            </p>
+          </div>
+          <div>
+            <img
+              src="./img/joohoon.JPG"
+              className="object-cover w-48 h-48 rounded-full mb-2"
+              alt="Developer Joohoon"
+            />
+            <p class="text-lg text-center text-primary-darker">
+              Developer - Joohoon Cha
+            </p>
           </div>
         </div>
       </div>

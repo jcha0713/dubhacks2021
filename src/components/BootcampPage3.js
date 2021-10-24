@@ -39,23 +39,26 @@ export default function BootcampPage3() {
 
   const handleClick = () => {
     setIndex(index + 1);
-    setCountdown(10);
+    if (index + 1 === titles.length - 1) {
+      setShow(true);
+    }
+    // setCountdown(10);
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCountdown(countdown - 1);
-    }, 1000);
-    if (index + 1 === titles.length) {
-      setShow(true);
-      return () => clearInterval(interval);
-    }
-    if (countdown === -1) {
-      setIndex(index + 1);
-      setCountdown(10);
-    }
-    return () => clearInterval(interval);
-  }, [countdown, index, titles.length]);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCountdown(countdown - 1);
+  //   }, 1000);
+  //   if (index + 1 === titles.length) {
+  //     setShow(true);
+  //     return () => clearInterval(interval);
+  //   }
+  //   if (countdown === -1) {
+  //     setIndex(index + 1);
+  //     setCountdown(10);
+  //   }
+  //   return () => clearInterval(interval);
+  // }, [countdown, index, titles.length]);
 
   return (
     <>
@@ -66,11 +69,11 @@ export default function BootcampPage3() {
             <p className="text-6xl mb-4 font-semibold">{titles[index]}</p>
             <p className="text-2xl ">{descriptions[index]}</p>
           </div>
-          {!show && (
+          {/* {!show && (
             <p className="text-gray-600 text-3xl mb-2">
               {countdown} seconds left
             </p>
-          )}
+          )} */}
           {show ? (
             <Link to="/about">
               <Confetti />
@@ -84,9 +87,9 @@ export default function BootcampPage3() {
           ) : (
             <button
               onClick={handleClick}
-              className="w-2/4 p-2 bg-black mb-4 text-white text-xl rounded-md"
+              className="w-1/4 p-2 bg-black mb-4 text-white text-xl rounded-md"
             >
-              ...or just send me to the next page
+              next page
             </button>
           )}
         </div>
