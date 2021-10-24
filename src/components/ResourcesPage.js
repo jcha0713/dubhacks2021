@@ -7,9 +7,12 @@ export default function ResourcesPage() {
     <div className="w-screen min-h-screen max-h-full flex flex-col bg-accent">
       <Navbar />
       <div className="mt-8 mx-auto w-3/4">
-        <h1 className="text-primary text-4xl font-semibold mb-8">
-          The future of personal data collection
-        </h1>
+        <a
+          href="https://interestingengineering.com/what-data-are-voice-assistants-collecting-and-how-to-protect-yourself"
+          className="text-primary text-4xl font-semibold mb-8"
+        >
+          Smart Speakers
+        </a>
 
         <div className="mb-12">
           <h3 className="text-3xl mb-2">
