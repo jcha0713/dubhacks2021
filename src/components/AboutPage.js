@@ -61,7 +61,7 @@ export default function AboutPage() {
                   <img
                     src="./img/Bryan.JPG"
                     className="cicrImg"
-                    alt="Developer Bryan"
+                    alt="Developer Bryan Phan"
                   ></img>
                   <div className="card-body">
                     <h5 className="card-title text-center">
@@ -76,7 +76,7 @@ export default function AboutPage() {
                   <img
                     src="./img/Carroll.JPG"
                     className="circImg"
-                    alt="Developer"
+                    alt="Developer Ryan Carroll"
                   ></img>
                   <div className="card-body">
                     <h5 className="card-title text-center">
@@ -91,7 +91,7 @@ export default function AboutPage() {
                   <img
                     src="./img/Joohoon.JPG"
                     className="circImg"
-                    alt="Developer"
+                    alt="Developer Joohoon Cha"
                   ></img>
                   <div className="card-body">
                     <h5 className="card-title text-center">
