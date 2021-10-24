@@ -6,12 +6,12 @@ export default function AboutPage() {
   return (
     <div className="w-screen h-full flex flex-col bg-accent">
       <Navbar />
-      <div className="my-0 mx-auto w-3/4 mt-8">
+      <div className="mt-8 mx-auto w-3/4">
         <h1 className="text-primary text-4xl font-semibold mb-8">
           About Our Project
         </h1>
 
-        <div>
+        <div className="mb-12">
           <h3 className="text-3xl mb-2">
             Why did we choose to do this project
           </h3>
@@ -54,45 +54,9 @@ export default function AboutPage() {
             be observed and recorded to an unfathomable extent?
           </ul>
         </div>
-        <div className="card">
-          <div className="card-body">
-            <h1>Our Team</h1>
-            <div className="row row-cols-1 row-cols-md-4 g-4">
-              <div className="col">
-                <div className="card h-100">
-                  <img
-                    src="./img/Bryan.JPG"
-                    className="cicrImg"
-                    alt="Developer Bryan"
-                  ></img>
-                  <div className="card-body">
-                    <h5 className="card-title text-center">
-                      Developer -Bryan Phan
-                    </h5>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col">
-                <div className="card h-100">
-                  <img src="" className="circImg" alt="Developer"></img>
-                  <div className="card-body">
-                    <h5 className="card-title text-center">Developer -</h5>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col">
-                <div className="card h-100">
-                  <img src="" className="circImg" alt="Developer"></img>
-                  <div className="card-body">
-                    <h5 className="card-title text-center">Developer -</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <h1 className="flex justify-between text-primary text-4xl font-semibold mb-8">
+          Members
+        </h1>
       </div>
     </div>
   );
