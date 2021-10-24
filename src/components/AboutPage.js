@@ -91,7 +91,7 @@ export default function AboutPage() {
               <div className="col">
                 <div className="card h-100">
                   <img
-                    src="./img/joohoon.JPG"
+                    src="./img/Joohoon.JPG"
                     className="circImg"
                     alt="Developer"
                   ></img>
