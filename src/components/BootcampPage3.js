@@ -1,84 +1,96 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import Confetti from 'react-confetti';
 
 // page shown when user presses accept from the first page
-export default function BootcampPage1() {
-    return (
-        <div>
-            <div>
-                <h1>Cyber Secuirty Bootcamp Lesson 3</h1>
+export default function BootcampPage3() {
+  const titles = [
+    'What is your personal data being user for?',
+    'Targeted ads',
+    'Scientists study it',
+    'Websites use it for internal research',
+    'Companies sell your data',
+    'Advertisers use it to create “consumer categories”',
+    'Insurance companies analyze it',
+    'Thieves use it to steal your identity',
+    'Social media sites use it to help you find friends',
+    'Apps use it to snoop on your whereabouts',
+    'It is being stored forever',
+    'End of Bootcamp!',
+  ];
+  const descriptions = [
+    '',
+    'A profile is created about you - the topics you search for, the websites you visit, your location, the links you “like” on social media, etc. - that allows websites to develop a personalized advertising experience just for you.',
+    'Social scientists look at your data to understand what people decide to share, post like, and so on, in order to better observe an array of contemporary social trends.',
+    'Internal research examines the links you click on, the media you share, or the time spent per page in order to optimize the user experience.',
+    'There is a whole economy surrounding the buying and selling of personal data. People will pay for anything ranging from your income to your court date details.',
+    `Advertisers will study huge chunks of aggregated data to create consumer categories. By doing this they group you into defined categories and use them to create even more refined targeted advertisements.`,
+    'Insurance companies will buy data to set rates or premiums. Some will even browse customers’ social media pages in hopes of denying or confirming claims.',
+    'Thieves would love to get your hands on your name and credit card information.',
+    'Social media sites will compare your data against others to try and find people you might know.',
+    'If you have a smartphone you can think of that as a personal tracking device because there’s a good chance you’re sharing your location data without even realizing it.',
+    'Most information you put online is being stored indefinitely. Some of this information can end up becoming a target for hackers.',
+    '',
+  ];
 
-            </div>
+  const [index, setIndex] = useState(0);
+  const [countdown, setCountdown] = useState(10);
+  const [show, setShow] = useState(false);
 
-            <div>
-                <h2>What is your personal data being user for?</h2>
-                <ol>
-                    <p>
-                        <strong>Targeted ads: </strong>
-                        <ul>
-                            A profile is created about you - the topics you search for, the websites you visit, your location, the links you “like” on social media, etc. - that allows websites to develop a personalized advertising experience just for you.
-                        </ul>
-                    </p>
-                    <p>
-                        <strong>Scientists study it: </strong>
-                        <ul>
-                            Social scientists look at your data to understand what people decide to share, post like, and so on, in order to better observe an array of contemporary social trends.
-                        </ul>
-                    </p>
-                    <p>
-                        <strong>Websites use it for internal research: </strong>
-                        <ul>
-                            Internal research examines the links you click on, the media you share, or the time spent per page in order to optimize the user experience.
-                        </ul>
-                    </p>
-                    <p>
-                        <strong>Companies sell your data: </strong>
-                        <ul>
-                            There is a whole economy surrounding the buying and selling of personal data. People will pay for anything ranging from your income to your court date details.
-                        </ul>
-                    </p>
-                    <p>
-                        <strong>Advertisers use it to create “consumer categories”: </strong>
-                        <ul>
-                            Advertisers will study huge chunks of aggregated data to create consumer categories. By doing this they group you into defined categories and use them to create even more refined targeted advertisements.
-                        </ul>
-                    </p>
-                    <p>
-                        <strong>Insurance companies analyze it: </strong>
-                        <ul>
-                            Insurance companies will buy data to set rates or premiums. Some will even browse customers’ social media pages in hopes of denying or confirming claims.
-                        </ul>
-                    </p>
-                    <p>
-                        <strong>Thieves use it to steal your identity.: </strong>
-                        <ul>
-                            Thieves would love to get your hands on your name and credit card information.
-                        </ul>
-                    </p>
-                    <p>
-                        <strong>Social media sites use it to help you find friends: </strong>
-                        <ul>
-                            Social media sites will compare your data against others to try and find people you might know
-                        </ul>
-                    </p>
-                    <p>
-                        <strong>Apps use it to snoop on your whereabouts: </strong>
-                        <ul>
-                            If you have a smartphone you can think of that as a personal tracking device because there’s a good chance you’re sharing your location data without even realizing it. 
-                        </ul>
-                    </p>
-                    <p>
-                        <strong>It is being stored forever: </strong>
-                        <ul>
-                            Most information you put online is being stored indefinitely. Some of this information can end up becoming a target for hackers.
-                        </ul>
-                    </p>
-                    
-                </ol>
-                {/* When clicking on button should bring you to next page */}
-                <Link to="/about" className="btn btn-primary">Learn More</Link>
-            </div>  
+  const handleClick = () => {
+    setIndex(index + 1);
+    setCountdown(10);
+  };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCountdown(countdown - 1);
+    }, 1000);
+    if (index + 1 === titles.length) {
+      setShow(true);
+      return () => clearInterval(interval);
+    }
+    if (countdown === -1) {
+      setIndex(index + 1);
+      setCountdown(10);
+    }
+    return () => clearInterval(interval);
+  }, [countdown, index, titles.length]);
+
+  return (
+    <>
+      <div className="flex flex-col items-center">
+        <div className="w-3/4 h-auto mt-24">
+          <h1 className="text-4xl mb-10">Cyber Secuirty Bootcamp Lesson 3</h1>
+          <div className="mb-10">
+            <p className="text-6xl mb-4 font-semibold">{titles[index]}</p>
+            <p className="text-2xl ">{descriptions[index]}</p>
+          </div>
+          {!show && (
+            <p className="text-gray-600 text-3xl mb-2">
+              {countdown} seconds left
+            </p>
+          )}
+          {show ? (
+            <Link to="/about">
+              <Confetti />
+              <button
+                onClick={handleClick}
+                className="w-2/4 p-2 bg-black mb-4 text-white text-xl rounded-md"
+              >
+                End of Lessons
+              </button>
+            </Link>
+          ) : (
+            <button
+              onClick={handleClick}
+              className="w-2/4 p-2 bg-black mb-4 text-white text-xl rounded-md"
+            >
+              ...or just send me to the next page
+            </button>
+          )}
         </div>
-    )
+      </div>
+    </>
+  );
 }
