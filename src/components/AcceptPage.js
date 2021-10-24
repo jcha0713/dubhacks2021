@@ -8,13 +8,13 @@ export default function AcceptPage() {
   useEffect(() => {
     const interval = setInterval(() => {
       setBgRed(!bgRed);
-    }, 1000);
+    }, 1300);
     return () => clearInterval(interval);
   }, [bgRed]);
 
   return (
     <div
-      className={`w-screen h-screen flex flex-col items-center justify-center transition-colors ease-in-out duration-1000 bg-${
+      className={`w-screen h-screen flex flex-col items-center justify-center transition-colors ease-in-out duration-100 bg-${
         bgRed ? 'red-600' : 'accent'
       }`}
     >
