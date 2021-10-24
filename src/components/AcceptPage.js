@@ -20,7 +20,7 @@ export default function AcceptPage() {
         <h1 className="text-9xl text-center text-white font-bold mt-8 mb-2">
           Uh-oh
         </h1>
-        <p className="text-center font-medium text-4xl">
+        <p className="text-center text-white font-medium text-4xl">
           You have given us access to your Data, <br /> your personal data is no
           longer private!
         </p>
