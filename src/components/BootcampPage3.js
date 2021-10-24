@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Confetti from 'react-confetti';
 
 // page shown when user presses accept from the first page
@@ -34,7 +34,6 @@ export default function BootcampPage3() {
   ];
 
   const [index, setIndex] = useState(0);
-  const [countdown, setCountdown] = useState(10);
   const [show, setShow] = useState(false);
 
   const handleClick = () => {
